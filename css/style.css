@@ -1,7 +1,7 @@
 
 body{
     margin:0;
-    color:#fff;
+    background: #efefef;
 }
 a{
     text-decoration:none;
@@ -12,16 +12,27 @@ ul{
     margin:0;
     padding:0;
 }
+*{
+    margin:0;
+    padding:0;
+}
 .clearfix::after{
     content:'';
     display:block;
     clear:both;
 }
 .navbar{
-    background: #000;
-    padding:20px 16px 20px 16px;
+    background:rgba(0,0,0,.2);
+    padding:20px 0 20px 0;
+    position:fixed;
+    top:0;
+    left:0;
+    width: 100%;
 }
-.navbar>nav {
+.navbar-inner{
+    padding:0 16px;
+}
+.navbar nav {
     float:right;
 }
 .logo {
@@ -38,11 +49,11 @@ ul{
 .logo>.card {
     color: #9a9da2;
 }
-.navbar>nav>ul>li {
+.navbar nav>ul>li {
     float:left;
     margin: auto 17px auto 17px;
 }
-.navbar>nav>ul>li>a {
+.navbar nav>ul>li>a {
     font-size: 12px;
     font-weight:bold;
     color:#b7b7b7;
@@ -52,6 +63,99 @@ ul{
     padding-bottom: 8px;
     display: block;
 }
-.navbar>nav>ul>li>a:hover {
+.navbar nav>ul>li>a:hover {
     border-bottom: 3px solid #e6686a;
+    color:#fff;
+}
+.banner{
+    height:515px;
+    background-image:url(../images/banner.jpg);
+    background-position:center center;
+    background-size:cover;
+}
+.mask{
+    background:rgba(0,0,0,.5);
+    height:100%;
+}
+.infoCard{
+    width:940px;
+    margin:auto;
+    background:#fff;
+}
+.infoCard .user-pic,
+.infoCard .infoText
+{
+    float:left;
+}
+.infoCard .infoCAard-main{
+    padding:50px;
+}
+.infoCard .infoText{
+    margin-left:65px;
+    width:470px;
+}
+.infoCard .welcome{
+    background: #e6686a;
+    color: white;
+    display: inline-block;
+    padding: 4px 16px;
+    line-height: 22px;
+    position: relative;
+    margin-bottom: 10px;
+    position: relative;
+}
+.infoCard .welcome .striangle {
+    display:block;
+    width:0;
+    border:10px solid transparent;
+    border-top-width:0;
+    border-left-color:#e6686a;
+    position: absolute;
+    top:100%;
+    left:4px;;
+}
+.infoCard .infoText h1{
+    margin-top:18px;
+}
+.infoCard .infoText p{
+    margin-top:4px;
+}
+.infoCard .infoText hr{
+    height:0;
+    margin:20px 0;
+    border-top:1px solid #DEDEDE;
+}
+.infoCard dl dt,
+.infoCard dl dd{
+    float:left;
+    padding:5px 0;
+}
+.infoCard dl dt{
+    width:30%;
+    font-weight: bold;
+}
+.infoCard dl dd{
+    width:70%;
+    color:#9da0a7;
+}
+.infoCard footer.media{
+    background: #E6686A;
+    text-align: center;
+}
+.infoCard footer.media a{
+    display: inline-block;
+    width: 40px;
+    line-height: 30px;
+    padding: 5px 0;
+    border-radius: 50%;
+    margin: 16px;
+}
+.infoCard footer.media a:hover{
+    background:#CF5D5F;
+}
+.infoCard footer.media svg{
+    width: 30px;
+    height: 30px;
+    fill: white;
+    vertical-align: top;
 }

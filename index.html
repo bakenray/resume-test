@@ -6,15 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>navbar</title>
     <link rel="stylesheet" href="./css/style.css">
+    <script src="//at.alicdn.com/t/font_703254_vrdo8wuuys.js"></script>
+    <style type="text/css">
+        .icon{
+           width: 1em; height: 1em;
+           vertical-align: -0.15em;
+           fill: currentColor;
+           overflow: hidden;
+        }
+    </style>   
 </head>
 <body>
-
-    <div class="clearfix navbar">
-
+<div class="navbar">
+    <div class="clearfix navbar-inner">
         <a href="#" class="logo">
             <span class="br">BR</span><span class="card">card</span>
         </a>
-
         <nav>
             <ul class="clearfix">
                 <li><a href="#">关于</a></li>
@@ -27,6 +34,54 @@
             </ul> 
         </nav>
     </div>
+</div>
+    <div class="banner">
+        <div class="mask"></div>
+    </div>
+<div class="infoCard">
+    <div class="clearfix infoCAard-main">
+        <div class="user-pic">
+            <img src="./images/user-img.jpg" width:"300" height="350px" alt="user-img">
+        </div>
+        <div class="infoText">
+            <span class="welcome">Hello
+                <span class="striangle"></span>
+            </span>
+            <h1>江湖竖子</h1>
+            <p>前端开发工程师</p>
+            <hr>
+            <dl class="clearfix">
+                <dt>年龄</dt>
+                <dd>25</dd>
+                <dt>城市</dt>
+                <dd>南宁</dd>
+                <dt>邮箱</dt>
+                <dd>lpqstrong@XXX.com</dd>
+                <dt>手机</dt>
+                <dd>1767713XXXX</dd>   
+                <dt>Q Q</dt>
+                <dd>479835XXX</dd>                           
+            </dl>
+        </div>
+    </div>
+    <footer class="media">
+        <a href="#">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-twitter0"></use>
+                </svg>
+        </a>
+        <a href="#">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-weibo"></use>
+                </svg>
+        </a>
+        <a href="#">
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-github"></use>
+                </svg>
+        </a>
+    </footer>
+</div>
 
 </body>
 </html>
