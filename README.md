@@ -1,2 +1,2 @@
-# navbar
+# WEB PRACTICE
 resume web 
