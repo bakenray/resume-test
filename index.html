@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>navbar</title>
+    <title>resumeweb</title>
     <link rel="stylesheet" href="./css/style.css">
     <script src="//at.alicdn.com/t/font_703254_vrdo8wuuys.js"></script>
 </head>
@@ -125,10 +125,43 @@
         </li>
     </ul>
 </section>
+
 <section class="sample-reels">
     <h2>作品集</h2>
-  
-</section>
+    <nav>
+        <ol class="clearfix">
+            <li id="sample1">所有</li>
+            <li id="sample2">框架</li>
+            <li id="sample3">原生JS&CSS</li>
+        </ol>
+        <div id="sampleBar" class="bar state-1">
+            <div class="sample-inner"></div>
+        </div>
+    </nav>
 
+    <div class="works">
+        <div class="big">
+            <img src="./images/1.jpg" alt="1">
+        </div>
+        <div class="small-1">
+            <img src="./images/2.jpg" alt="2">
+        </div>
+        <div class="small-2">
+            <img src="./images/3.jpg" alt="3">
+        </div>
+
+    </div>
+</section>
+<script>
+        sample1.onclick= function(){
+          sampleBar.className = 'bar state-1'
+        }
+        sample2.onclick= function(){
+          sampleBar.className = 'bar state-2'
+        }
+        sample3.onclick= function(){
+          sampleBar.className = 'bar state-3'
+        }
+      </script>
 </body>
 </html>

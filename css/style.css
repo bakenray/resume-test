@@ -7,7 +7,7 @@ a{
     text-decoration:none;
     color:inherit;
 }
-ul{
+ul,ol{
     list-style:none;
     margin:0;
     padding:0;
@@ -16,14 +16,12 @@ ul{
     margin:0;
     padding:0;
 }
-
 .icon{
     width: 1em; height: 1em;
     vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
  }
-
 .clearfix::after{
     content:'';
     display:block;
@@ -245,5 +243,72 @@ section.skills .progress-bar >.progress{
     height: 100%;
     background: #E6686A;
     border-radius: 2px;
-    
+}
+
+section.sample-reels{
+    text-align: center;
+    margin-bottom: 100px;
+}
+section.sample-reels nav{
+    display: inline-block;
+    margin-top:32px;
+    vertical-align:top;
+    text-align:center;
+}
+section.sample-reels nav ol{
+    margin:0 auto;
+    display:inline-block;
+    vertical-align: top;
+}
+section.sample-reels nav ol li{
+    float:left;
+    cursor:pointer;
+    margin-left: 40px;
+}
+section.sample-reels nav ol li:first-child{
+    margin-left: 0;
+}
+section.sample-reels .bar{
+    height: 5px;
+    background: white;
+    margin-top: 5px;
+    margin-bottom: 28px;
+    border-radius: 2px;
+}
+section.sample-reels nav .sample-inner{
+    height: 100%;
+    background: #E6686A;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+section.sample-reels nav .state-1 .sample-inner{
+    margin-left: 0;
+    width: 60px;
+}
+section.sample-reels nav .state-2 .sample-inner{
+    margin-left: 70px;
+    width: 60px;
+}
+section.sample-reels nav .state-3 .sample-inner{
+    margin-left: 152px;
+    width: 120px;
+}
+section.sample-reels .works{
+    position: relative;
+    height:597px;
+}
+section.sample-reels .works .big{
+    position:absolute;
+    left:0;
+    top:0;
+}
+section.sample-reels .small-1{
+    position: absolute; 
+    left:645px;
+    top:0; 
+}
+section.sample-reels .small-2{
+    position: absolute; 
+    left:645px;
+    top:312px; 
 }
