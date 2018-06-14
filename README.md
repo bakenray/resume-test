@@ -1,3 +1,2 @@
 # WEB PRACTICE
-
-resume-test web 
+resume web 

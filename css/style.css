@@ -16,13 +16,20 @@ ul{
     margin:0;
     padding:0;
 }
+
+.icon{
+    width: 1em; height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+ }
+
 .clearfix::after{
     content:'';
     display:block;
     clear:both;
 }
 .navbar{
-    background:rgba(0,0,0,.2);
     padding:20px 0 20px 0;
     position:fixed;
     top:0;
@@ -81,6 +88,7 @@ ul{
     width:940px;
     margin:auto;
     background:#fff;
+    margin-top:-340px;
 }
 .infoCard .user-pic,
 .infoCard .infoText
@@ -158,4 +166,84 @@ ul{
     height: 30px;
     fill: white;
     vertical-align: top;
+}
+.download-resume{
+    text-align:center;
+}
+.download-resume a{
+    border:1px solid #cdcfd1;
+    display: inline-block;
+    padding: 21px 55px;
+    color: #3d4451;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 32px 0;
+    transition: box-shadow 0.25s;
+}
+.download-resume a:hover{
+    box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.2); 
+}
+.self-introduction{
+    margin:auto;
+    text-align: center;
+    max-width:940px;
+    line-height: 1.8;
+    font-size: 18px;
+}
+.selfIntroduction {
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-family: kai;
+    line-height: 1.8;
+    font-size: 18px;
+}
+section.skills,section.sample-reels{
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+}
+section.skills>h2,
+section.sample-reels>h2
+{
+    color: #3d4451;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 600;
+    text-align: center;
+}
+section.skills ul{
+    background: #fff;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.35);
+    padding: 42px 50px 10px 50px;
+    margin-top: 30px;
+}
+section.skills ul li{
+    float: left;
+    width: 48%;
+    box-sizing: border-box;
+}
+section.skills ul li:nth-child(even){
+    float:right;
+
+}
+section.skills h3{
+    font-size: 14px;
+    line-height: 1.1;
+    padding-right: 40px;
+    font-weight: normal;
+}
+section.skills .progress-bar{
+    height: 5px;
+    background: #FAE1E1;
+    border-radius: 2px;
+    margin: 4px 0 40px;
+}
+section.skills .progress-bar >.progress{
+    height: 100%;
+    background: #E6686A;
+    border-radius: 2px;
+    
 }
