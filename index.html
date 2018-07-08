@@ -22,10 +22,10 @@
         </a>
         <nav class="menu">
             <ul class="clearfix">
-                <li><a href="#">关于</a></li>
-                <li><a href="#">技能</a></li>
+                <li><a href="#siteAbout">关于</a></li>
+                <li><a href="#siteSkills">技能</a></li>
                 <li>
-                    <a  href="#">作品</a>
+                    <a  href="#siteWorks">作品</a>
                     <ul class="submenu">
                         <li> <a href="#">作品1</a> </li>
                         <li><a href="#">作品2</a></li>
@@ -33,7 +33,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a  href="#">博客</a>
+                    <a  href="#siteBlog">博客</a>
                     <ul class="submenu">
                             <li><a href="#">博客1</a> </li>
                             <li><a href="#">博客2</a></li>
@@ -50,7 +50,7 @@
     <div class="banner">
         <div class="mask"></div>
     </div>
-<div class="infoCard">
+<div id="siteAbout" class="infoCard">
     <div class="clearfix infoCAard-main">
         <div class="user-pic">
             <img src="./images/user-img.jpg" width:"300" height="350px" alt="user-img">
@@ -104,7 +104,7 @@
     技能：前端开发，UI设计，Vue.js开发，Node.js 开发
 </p>
 
-<section class="skills">
+<section id="siteSkills" class="skills">
     <h2>技能</h2>
     <ul class="clearfix">
         <li>
@@ -146,7 +146,7 @@
     </ul>
 </section>
 
-<section class="sample-reels">
+<section class="sample-reels" id="siteWorks">
     <h2>作品集</h2>
     <nav>
         <ol class="clearfix">
@@ -202,6 +202,20 @@ for(let i=0; i<liTags.length; i++){
     liTags[i].onmouseleave = function(x){
         x.currentTarget.classList.remove('active') 
 }
+}
+
+let aTags = document.querySelectorAll('nav.menu > ul > li >a')
+
+for(let i= 0; i< aTags.length; i++){
+    aTags[i].onclick = function(x){
+        x.preventDefault()
+        let a = x.currentTarget
+        let href = a.getAttribute('href')
+        let element = document.querySelector(href)
+        let top = element.offsetTop
+        window.scrollTo(0,top - 80)
+
+    }
 }
 
 </script>
