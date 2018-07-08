@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>resumeweb</title>
+    <link rel="stylesheet" href="./css/loading.css">
     <link rel="stylesheet" href="./css/style.css">
     <script src="//at.alicdn.com/t/font_703254_vrdo8wuuys.js"></script>
 </head>
 <body>
+
+<div id="siteWelcome" class="site-welcome active">
+    <div class="loading"></div>
+</div>
+
 <div class="navbar">
     <div class="clearfix navbar-inner">
         <a href="#" class="logo">
@@ -162,6 +168,10 @@
         sample3.onclick= function(){
           sampleBar.className = 'bar state-3'
         }
-      </script>
+</script>
+
+<script>
+    siteWelcome.classList.remove('active')
+</script>
 </body>
 </html>
