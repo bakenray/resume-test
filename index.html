@@ -20,12 +20,26 @@
         <a href="#" class="logo">
             <span class="br">BR</span><span class="card">card</span>
         </a>
-        <nav>
+        <nav class="menu">
             <ul class="clearfix">
                 <li><a href="#">关于</a></li>
                 <li><a href="#">技能</a></li>
-                <li><a href="#">作品</a></li>
-                <li><a href="#">博客</a></li>
+                <li>
+                    <a  href="#">作品</a>
+                    <ul class="submenu">
+                        <li>作品1</li>
+                        <li>作品2</li>
+                        <li>作品3</li>
+                    </ul>
+                </li>
+                <li>
+                    <a  href="#">博客</a>
+                    <ul class="submenu">
+                            <li>博客1 </li>
+                            <li>博客2</li>
+                            <li>博客3</li>
+                        </ul>
+                </li>
                 <li><a href="#">日历</a></li>
                 <li><a href="#">联系方式</a></li>
                 <li><a href="#">其他</a></li>
@@ -178,7 +192,17 @@
     window.onscroll = function(){
         (window.scrollY>0) ? navBar.classList.add('sticky') : navBar.classList.remove('sticky');
     }
+let liTags = document.querySelectorAll('nav.menu > ul > li')
 
+for(let i=0; i<liTags.length; i++){
+
+    liTags[i].onmouseenter = function(x){
+       x.currentTarget.classList.add('active')   
+}
+    liTags[i].onmouseleave = function(x){
+        x.currentTarget.classList.remove('active') 
+}
+}
 
 </script>
 </body>
