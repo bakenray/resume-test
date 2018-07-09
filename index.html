@@ -191,32 +191,17 @@
 
     setTimeout(function(){
         siteWelcome.classList.remove('active')
-    },1000)
+    },900)
+
+setTimeout(function(){
+    scrollContrl()  
+},1000)
+
 
     window.onscroll = function(){
-
         (window.scrollY>0) ? navBar.classList.add('sticky') : navBar.classList.remove('sticky');
-
-        let specialTags =document.querySelectorAll('[data-x]')
-        let minIndex  = 0
-        for(let i =1; i<specialTags.length;i++){
-            if(Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY) ){
-                minIndex = i
-            }
-        }
-        for(let i = 0; i<specialTags.length; i++){
-            specialTags[i].classList.remove('active')
-        }
-        specialTags[minIndex].classList.add('active')
-        
-        let id = specialTags[minIndex].id
-        let a = document.querySelector('a[href="#' + id +'"]')
-        let li =a.parentNode
-        let brotherAndMe = li.parentNode.children
-        for(let i= 0;i<brotherAndMe.length;i++){
-            brotherAndMe[i].classList.remove('active')
-        }
-        li.classList.add('active')
+       
+        scrollContrl()
     }
 
     let liTags = document.querySelectorAll('nav.menu > ul > li')
@@ -262,6 +247,31 @@
             .start();  //开始缓动
     }
 }
+
+    let specialTags =document.querySelectorAll('[data-x]')
+    for(var i=0;i<specialTags.length;i++){
+        specialTags[i].classList.add('offset')
+    }
+
+ function scrollContrl(){
+            let specialTags =document.querySelectorAll('[data-x]')
+                let minIndex  = 0
+                for(let i =1; i<specialTags.length;i++){
+                    if(Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY) ){
+                        minIndex = i
+                    }
+                }
+                specialTags[minIndex].classList.remove('offset')
+                
+                let id = specialTags[minIndex].id
+                let a = document.querySelector('a[href="#' + id +'"]')
+                let li =a.parentNode
+                let brotherAndMe = li.parentNode.children
+                for(let i= 0;i<brotherAndMe.length;i++){
+                    brotherAndMe[i].classList.remove('heighlight')
+                }
+                li.classList.add('heighlight')
+        }
 </script>
 
 </body>
