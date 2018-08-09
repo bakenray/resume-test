@@ -2,6 +2,7 @@
 body{
     margin:0;
     background: #efefef;
+    margin-bottom:100px;
 }
 a{
     text-decoration:none;
@@ -319,75 +320,40 @@ section.skills .progress-bar >.progress{
 }
 
 section.skills.offset .progress-bar >.progress{
-
     transform:translateX(-100%);
 }
-
 
 section.sample-reels{
     text-align: center;
     margin-bottom: 100px;
 }
-section.sample-reels nav{
-    display: inline-block;
-    margin-top:32px;
-    vertical-align:top;
-    text-align:center;
-}
-section.sample-reels nav ol{
-    margin:0 auto;
-    display:inline-block;
-    vertical-align: top;
-}
-section.sample-reels nav ol li{
-    float:left;
-    cursor:pointer;
-    margin-left: 40px;
-}
-section.sample-reels nav ol li:first-child{
-    margin-left: 0;
-}
-section.sample-reels .bar{
-    height: 5px;
-    background: white;
-    margin-top: 5px;
-    margin-bottom: 28px;
-    border-radius: 2px;
-}
-section.sample-reels nav .sample-inner{
-    height: 100%;
-    background: #E6686A;
-    border-radius: 2px;
-    transition: all 0.3s;
-}
-section.sample-reels nav .state-1 .sample-inner{
-    margin-left: 0;
-    width: 60px;
-}
-section.sample-reels nav .state-2 .sample-inner{
-    margin-left: 70px;
-    width: 60px;
-}
-section.sample-reels nav .state-3 .sample-inner{
-    margin-left: 152px;
-    width: 120px;
-}
 section.sample-reels .works{
-    position: relative;
-    height:597px;
+   margin-top:30px; 
 }
-section.sample-reels .works .big{
-    position:absolute;
-    left:0;
-    top:0;
+section.sample-reels .works .swiper-container {
+    width: 700px;
+    height:500px;
+ }
+section.sample-reels .works .swiper-button-next,
+section.sample-reels .works .swiper-button-prev
+{
+    background-color: rgba(255,255,255,.2);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    background-size: 40%;
+    transition: all .3s;
+    outline: none;
 }
-section.sample-reels .small-1{
-    position: absolute; 
-    left:645px;
-    top:0; 
-}
-section.sample-reels .small-2{
-    position: absolute; 
-    left:645px;
-    top:312px; 
+
+section.sample-reels .works .swiper-button-next:hover,
+section.sample-reels .works .swiper-button-prev:hover
+{
+    background-color: rgba(255,255,255,.5);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    background-size: 40%;
 }

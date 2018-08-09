@@ -7,6 +7,7 @@
     <title>resumeweb</title>
     <link rel="stylesheet" href="./css/loading.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/swiper.min.css"> 
     <script src="//at.alicdn.com/t/font_703254_vrdo8wuuys.js"></script>
 </head>
 <body>
@@ -14,7 +15,6 @@
 <div id="siteWelcome" class="site-welcome active">
     <div class="loading"></div>
 </div>
-
 <div id="navBar" class="navbar">
     <div class="clearfix navbar-inner">
         <a href="#" class="logo">
@@ -94,7 +94,6 @@
         </a>
     </footer>
 </div>
-
 <p class="download-resume">
     <a href="#" download="">下载 PDF 简历</a>
 </p>
@@ -103,7 +102,6 @@
     <br>
     技能：前端开发，UI设计，Vue.js开发，Node.js 开发
 </p>
-
 <section  data-x id="siteSkills" class="skills">
     <h2>技能</h2>
     <ul class="clearfix">
@@ -145,134 +143,29 @@
         </li>
     </ul>
 </section>
-
 <section data-x class="sample-reels" id="siteWorks">
     <h2>作品集</h2>
-    <nav>
-        <ol class="clearfix">
-            <li id="sample1">所有</li>
-            <li id="sample2">框架</li>
-            <li id="sample3">原生JS&CSS</li>
-        </ol>
-        <div id="sampleBar" class="bar state-1">
-            <div class="sample-inner"></div>
-        </div>
-    </nav>
-
     <div class="works">
-        <div class="big">
-            <img src="./images/1.jpg" alt="1">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <img src="./images/works/banner-1.png" class="swiper-slide">
+                <img src="./images/works/banner-1.png" class="swiper-slide">
+                <img src="./images/works/banner-1.png" class="swiper-slide">
+            </div>
+            <div class="swiper-pagination"></div>
         </div>
-        <div class="small-1">
-            <img src="./images/2.jpg" alt="2">
-        </div>
-        <div class="small-2">
-            <img src="./images/3.jpg" alt="3">
-        </div>
-
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
     </div>
 </section>
-
+<script src="./js/loading.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.1.1/Tween.min.js"></script>
-
-<script>
-        sample1.onclick= function(){
-          sampleBar.className = 'bar state-1'
-        }
-        sample2.onclick= function(){
-          sampleBar.className = 'bar state-2'
-        }
-        sample3.onclick= function(){
-          sampleBar.className = 'bar state-3'
-        }
-</script>
-
-<script>
-
-    setTimeout(function(){
-        siteWelcome.classList.remove('active')
-    },900)
-
-setTimeout(function(){
-    scrollContrl()  
-},1000)
-
-
-    window.onscroll = function(){
-        (window.scrollY>0) ? navBar.classList.add('sticky') : navBar.classList.remove('sticky');
-       
-        scrollContrl()
-    }
-
-    let liTags = document.querySelectorAll('nav.menu > ul > li')
-
-    function animate(time){
-        requestAnimationFrame(animate)
-        TWEEN.update(time)
-    }
-    requestAnimationFrame(animate)
-
-    for(let i=0; i<liTags.length; i++){
-        liTags[i].onmouseenter = function(x){
-            x.currentTarget.classList.add('active')      
-        }
-
-        liTags[i].onmouseleave = function(x){
-            x.currentTarget.classList.remove('active') 
-        }
-    }
-
-    let aTags = document.querySelectorAll('nav.menu > ul > li >a')
-
-    for(let i= 0; i< aTags.length; i++){
-        aTags[i].onclick = function(x){
-            x.preventDefault()
-            let a = x.currentTarget
-            let href = a.getAttribute('href')
-            let element = document.querySelector(href)
-            let top = element.offsetTop
-
-            let currentTop = window.scrollY
-            let targetTop = top-80
-            let s = targetTop - currentTop // 距离
-            var coords = { y: currentTop }//起始位置
-            var t = Math.abs((s/100)*250) //时间
-            if(t>500){ t=500 }
-            var tween = new TWEEN.Tween(coords) //起始时间
-            .to({ y: targetTop}, t)   //结束为止和时间
-            .easing(TWEEN.Easing.Quadratic.InOut)//缓动类型
-            .onUpdate(function(){            //coords.y改变
-                window.scrollTo(0,coords.y) //更新页面
-            })
-            .start();  //开始缓动
-    }
-}
-
-    let specialTags =document.querySelectorAll('[data-x]')
-    for(var i=0;i<specialTags.length;i++){
-        specialTags[i].classList.add('offset')
-    }
-
- function scrollContrl(){
-            let specialTags =document.querySelectorAll('[data-x]')
-                let minIndex  = 0
-                for(let i =1; i<specialTags.length;i++){
-                    if(Math.abs(specialTags[i].offsetTop - window.scrollY) < Math.abs(specialTags[minIndex].offsetTop - window.scrollY) ){
-                        minIndex = i
-                    }
-                }
-                specialTags[minIndex].classList.remove('offset')
-                
-                let id = specialTags[minIndex].id
-                let a = document.querySelector('a[href="#' + id +'"]')
-                let li =a.parentNode
-                let brotherAndMe = li.parentNode.children
-                for(let i= 0;i<brotherAndMe.length;i++){
-                    brotherAndMe[i].classList.remove('heighlight')
-                }
-                li.classList.add('heighlight')
-        }
-</script>
+<script src="./js/swiper.min.js"></script>
+<!-- 模块化 -->
+<script src="./js/init-swiper.js"></script>
+<script src="./js/sticky-bar.js"></script>
+<script src="./js/auto-slide.js"></script>
+<script src="./js/nav-smoothly.js"></script>
 
 </body>
 </html>
