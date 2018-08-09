@@ -1,6 +1,5 @@
-    
     !function(){
-        //添加一个offset类，设置所有版块默认往下移一段距离，
+        //添加一个offset类，设置所有版块默认往下移一段距离
         let specialTags =document.querySelectorAll('[data-x]')
         for(var i=0;i<specialTags.length;i++){
             specialTags[i].classList.add('offset')
@@ -13,7 +12,6 @@
         window.addEventListener('scroll',function(x){
             scrollContrl()
         })
-    
         //执行的封装函数
         function scrollContrl(){
             let specialTags =document.querySelectorAll('[data-x]')

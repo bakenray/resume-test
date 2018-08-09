@@ -1,21 +1,29 @@
 !function(){
-    var mySwiper = new Swiper ('.swiper-container', {
-        // Optional parameters
-        // direction: 'vertical',
-        loop: true,
-        // pagination
-        pagination: {
-          el: '.swiper-pagination',
+    var view =document.querySelector('#works')
+    var controller = {
+        view:null,
+        swiper:null,
+        init:function(view){
+            this.view = view
+            this.initSwiper()
         },
-        // Navigation arrows
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
+        swiperOptions:{
+            loop: true,
+            pagination: {
+              el: '.swiper-pagination',
+            },
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            }
         },
-        // scrollbar
-        // scrollbar: {
-        //   el: '.swiper-scrollbar',
-        // },
-      })
+        initSwiper:function(){
+            this.swiper = new Swiper (
+                this.view.querySelector('.swiper-container'), 
+                this.swiperOptions
+            )
+        }
+    }
+    controller.init(view)
 }.call()
 
