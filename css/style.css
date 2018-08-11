@@ -268,14 +268,15 @@ ul,ol{
     line-height: 1.8;
     font-size: 18px;
 }
-section.skills,section.sample-reels{
+section.skills,section.sample-reels,section.message{
     max-width: 940px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 60px;
 }
 section.skills>h2,
-section.sample-reels>h2
+section.sample-reels>h2,
+section.message>h2
 {
     color: #3d4451;
     font-size: 34px;
@@ -352,4 +353,61 @@ section.sample-reels .works .swiper-button-prev:hover
 {
     background-color: rgba(255,255,255,.5);
     box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+}
+
+section.message{
+    color: #676767;
+}
+section.message ol{
+    background: #fff;
+    min-height: 100px;
+    padding: 10px;
+    border: 1px solid #e8e8e8;
+    border-radius: 2px;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+    margin:30px auto; 
+}
+section.message ol li {
+    margin: 0 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #e8e8e8;
+}
+section.message ol li:last-child{
+    border: none;
+}
+section.message form  .input-control{
+    width:35%;
+    margin:30px 0;
+    float: left;
+    margin-right:5%;
+}
+section.message form  .input-control:last-child{
+    width:20%;
+    margin-right:0;
+}
+section.message form  .input-control input{
+    width:80%;
+    min-height:36px;
+    line-height: 36px;
+    box-sizing: border-box;
+    float: left;
+    font-size: 18px;
+    box-sizing: border-box;
+    border: 1px solid #e9e9e9;
+    border-radius: 2px;
+}
+section.message form  .input-control:last-child input{
+    width: 100%;
+    background: #e86268;
+    border: 1px solid #d25b64;
+    color: #fff;
+    outline: none;
+}
+section.message form  .input-control label{
+    width:20%;
+    font-size: 18px;
+    float: left;
+    text-align: center;
+    min-height:36px;
+    line-height: 36px;
 }
