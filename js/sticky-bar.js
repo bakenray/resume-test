@@ -1,6 +1,6 @@
     //导航滚动时吸附页面顶部
     !function(){
-    var view = document.querySelector('#navBar')
+    var view = View('#navBar')
     var controller = {
         view: null,
         init: function(view){
